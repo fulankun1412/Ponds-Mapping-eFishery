@@ -1,0 +1,17 @@
+clearml-project-config:
+  project-name: Take Home Test Model-eFishery
+  task-name: Ponds Segmentation, Count Ponds, and Estimate the size area
+  id: d214504e8ce94dce827da6e946d618ac
+  task-type: inference
+
+model-config:
+  YOLO-model: Ponds-eFishery
+  published: True
+  tags: []
+  delimiter: delimiter/delimiter6.png
+  vision-key: development-356407-6002a5991254.json
+  image-size: 640
+  device-mode: cpu
+  save-mode: False
+  conf: 0.25
+  iou: 0.25
