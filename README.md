@@ -25,9 +25,12 @@ Sehingga nantinya menghasilkan dataframe seperti contoh berikut:
 ![image](https://github.com/fulankun1412/Ponds-Mapping-eFishery/assets/16248869/a5ecaad7-a795-4f6f-8839-c4fce51b033d)
 
 Solusi untuk nomor 1 dan 2 sudah dapat di implementasikan dan bisa dicoba untuk penggunaan testing.
-3. Untuk Geo Tagging menggunakan hash map
-4.
-5.
+3. Untuk Geo Tagging menggunakan hash map. Dengan memperhitungkan jarak dari setiap kolam yang sudah terdeteksi ke kordinat awal yang dicari. Di hitungkan kordinat setiap kolam tersebut menggunakan jarak dari kordinat awal. Setelah setiap kordinat dari setiap kolam didapatkan kordinatnya, maka dari kordinat di transform menjadi kordinat GeoHash dengan tingkat presisi antara 7 dan 8 untuk mempermudah pengalamatan setiap kolamnya.
+![238165434-689f3c3a-bd2b-4c3c-a151-35faa2b36ac0](https://github.com/fulankun1412/Ponds-Mapping-eFishery/assets/16248869/ba83d3a0-bbbf-4b99-b7e3-4995d189e07c)
+
+4. Menggunakan hasil deteksi segmentasi mask yang ada, bisa kita dapatkan GeoJSON Geometry Polygon nya dengan konversi titik poly yang sudah didapatkan, maka didapatkan GeoJSON yang bisa digunakan untuk memetakan kolam pada fungsi map yang lain.
+
+5. Untuk mencari membuat alamat Geocoding, kita bisa menggunakan Geocoding API untuk mentransformasi titik kordinat yang sudah didapat dari masing-masing kolam udang. Menggunakan API tersebut kita akan mendapatkan human-readable address yang mudah dibaca oleh manusia. 
 
 ## Instalasi dan Penggunaan
 Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di local environtment, sangat disarankan untuk menggunakan virtual environment atau sudah terpasang docker:
